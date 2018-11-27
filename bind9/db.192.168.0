@@ -1,0 +1,14 @@
+;zone file for 192.168.0.0/24 (netze1.cs.hm.edu)
+;Reverse Lookup Zone
+$TTL	604800
+@	IN	SOA	s.netze1.cs.hm.edu. admin.netze1.cs.hm.edu. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	s.netze1.cs.hm.edu.
+254	IN	PTR	s.netze1.cs.hm.edu.
+1	IN	PTR	a.netze1.cs.hm.edu.
+2	IN	PTR	b.netze1.cs.hm.edu.

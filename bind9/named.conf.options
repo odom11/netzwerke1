@@ -1,0 +1,26 @@
+options {
+	directory "/var/cache/bind";
+
+	forwarders {
+	 	8.8.8.8;
+		8.8.4.4;
+	};
+	forward only;	
+
+	dnssec-validation auto;
+
+	auth-nxdomain no;    # conform to RFC1035
+	listen-on-v6 { any; };
+};
+
+zone "netze1.cs.hm.edu" {
+	type master;
+	file "/etc/bind/zones/db.netze1.cs.hm.edu";
+	
+ };
+
+
+zone "0.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.192.168.0";
+};

@@ -1,0 +1,20 @@
+;zone file for netze1.cs.hm.edu
+;Forward Lookup Zone
+$TTL	86400
+@	IN	SOA	s.netze1.cs.hm.edu. admin.netze1.cs.hm.edu. (
+			     1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			  86400 )	; Negative Cache TTL
+;
+;name servers
+@			IN	NS	s.netze1.cs.hm.edu.
+			IN	MX	10 mail.netze1.cs.hm.edu.
+mail 		IN	A	192.168.0.254
+s			IN	A	192.168.0.254
+			IN	AAAA	fe80::c0a8:fe
+
+;name server - A records
+a			IN	A	192.168.0.1
+b			IN	A	192.168.0.2
